@@ -30,24 +30,17 @@ module Environment
 
     class Control
         attr_accessor :missions
-        
-        def initialize
-            @missions = {
-                name: {
-                    objective: "",
-                    pack: packs,
-                    status: active
-                }
-            }
-        end
 
+        def initialize
+            @missions = {}
+        end
+        
         def new_mission(name, objective, pack)
-            respond = {
-                missions.name: name,
-                missions.name.objective: objective,
-                missions.pack: pack
+            missions[name] = {
+                objective: objective,
+                pack: pack
+                status: :active
             }
-            p respond
         end
 
     end
