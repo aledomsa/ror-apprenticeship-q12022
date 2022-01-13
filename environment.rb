@@ -30,6 +30,7 @@ module Environment
 
     class Control
         attr_accessor :missions
+        mission_states = %i[paused aborted failed accompished]
 
         def initialize
             @missions = {}
@@ -41,6 +42,11 @@ module Environment
                 pack: pack
                 status: :active
             }
+        end
+
+
+        define_method "set_mission_to#{mission_states}"
+            missions[mission][:status]
         end
 
     end
