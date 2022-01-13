@@ -44,9 +44,10 @@ module Environment
             }
         end
 
-
-        define_method "set_mission_to#{mission_states}"
-            missions[mission][:status]
+        mission_states.each do |mission_state|
+            define_method "set_mission_to#{mission_state}"(:mission)
+                missions[mission][:status]
+            end
         end
 
     end
