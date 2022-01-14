@@ -63,19 +63,19 @@ module Environment
                 case data_type
                     when :personal
                         personal_data = {
-                            surname: "",
-                            age: 0,
-                            country: "",
-                            language: "",
-                            marital_status: "",
-                            children: 0
+                            surname: data_information[:surname],
+                            age: data_information[:age],
+                            country: data_information[:country],
+                            language: data_information[:language],
+                            marital_status: data_information[:marital_status],
+                            children: data_information[:children]
                         }
                     when :professional
                         professional_data = {
-                            position: "",
-                            occupation: "",
-                            skills: "",
-                            observations: ""
+                            position: data_information[:position],
+                            occupation: data_information[:occupation],
+                            skills: data_information[:skills],
+                            observations: data_information[:observations]
                         }
 
                 end
