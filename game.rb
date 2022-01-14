@@ -13,5 +13,12 @@ class Game
         @depot = Environment::Depot.new
         @control = Environment::Control.new
     end
-    
+
+    def new_mission(name:, objective:, pack:)
+        control.new_mission(name: name, objective: objective, pack: pack)
+        board[:control] = {
+            missions: control.missions
+        }
+    end
+
 end
