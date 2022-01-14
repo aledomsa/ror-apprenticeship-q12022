@@ -96,8 +96,8 @@ module Environment
             }
             @extra_shift = {
                 id: self.object_id,
-                hours: Integer.new,
-                payment: Float.new,
+                hours: 0,
+                payment: 0.0,
                 facility: String.new,
                 status: nil
             }
