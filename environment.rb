@@ -77,10 +77,31 @@ module Environment
                             skills: data_information[:skills],
                             observations: data_information[:observations]
                         }
-
                 end
             end
         end
 
     end
+    
+    class Worker < Human
+        attr_accessor :standard_shift, :extra_shift
+
+        def initialize
+            @standard_shift = {
+                id: self.object_id,
+                hours: 8,
+                payment: 8,
+                facility: String.new,
+                status: nil
+            }
+            @extra_shift = {
+                id: self.object_id,
+                hours: Integer.new,
+                payment: Float.new,
+                facility: String.new,
+                status: nil
+            }
+        end
+    end
+
 end
