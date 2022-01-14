@@ -53,5 +53,34 @@ module Environment
     end
 
     class Human
+        attr_accessor :id, :name, :personal_data, :professional_data
+        data_types = %i[personal professional]
+        @id = self.object_id
+        @name = name
+        
+        data_types.each do |data_type|
+            define_method "set_#{data_type}_data" do |data_information|
+                case data_type
+                    when :personal
+                        personal_data = {
+                            surname: "",
+                            age: 0,
+                            country: "",
+                            language: "",
+                            marital_status: "",
+                            children: 0
+                        }
+                    when :professional
+                        professional_data = {
+                            position: "",
+                            occupation: "",
+                            skills: "",
+                            observations: ""
+                        }
+
+                end
+            end
+        end
+
     end
 end
