@@ -37,7 +37,7 @@ module Environment
         end
         
         def new_mission(name:, objective:, pack:)
-            missions[name] = {
+            @missions[name] = {
                 objective: objective,
                 pack: pack,
                 status: :active
@@ -46,7 +46,7 @@ module Environment
 
         mission_states.each do |mission_state|
             define_method "set_mission_to_#{mission_state}" do |mission|
-                missions[mission][:status] = mission_state
+                @missions[mission][:status] = mission_state
             end
         end
 
@@ -55,14 +55,19 @@ module Environment
     class Human
         attr_accessor :id, :name, :personal_data, :professional_data
         data_types = %i[personal professional]
-        @id = self.object_id
-        @name = name
+
+        def initialize (name:, personal_data: nil, professional_data: nil)
+            @id = self.object_id
+            @name = name
+            @personal_data = personal_data
+            @professional_data = professional_data
+        end
         
         data_types.each do |data_type|
             define_method "set_#{data_type}_data" do |data_information|
                 case data_type
                     when :personal
-                        personal_data = {
+                        @personal_data = {
                             surname: data_information[:surname],
                             age: data_information[:age],
                             country: data_information[:country],
@@ -71,7 +76,7 @@ module Environment
                             children: data_information[:children]
                         }
                     when :professional
-                        professional_data = {
+                        @professional_data = {
                             position: data_information[:position],
                             occupation: data_information[:occupation],
                             skills: data_information[:skills],
@@ -81,12 +86,15 @@ module Environment
             end
         end
 
+        
+
     end
     
     class Worker < Human
         attr_accessor :standard_shift, :extra_shift
 
-        def initialize
+        def initialize (name:)
+            @name = name
             @standard_shift = {
                 id: self.object_id,
                 hours: 8,

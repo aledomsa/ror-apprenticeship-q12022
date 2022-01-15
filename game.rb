@@ -16,9 +16,14 @@ class Game
 
     def new_mission(name:, objective:, pack:)
         control.new_mission(name: name, objective: objective, pack: pack)
-        board[:control] = {
+        @board[:control] = {
             missions: control.missions
         }
+    end
+
+    def new_worker(name:)
+        worker = Environment::Worker.new(name: name)
+        @board[:players].store(name, worker)
     end
 
 end
