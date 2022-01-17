@@ -70,4 +70,3 @@ class ErrorTest
   end
 end
 ```
-
