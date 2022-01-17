@@ -28,9 +28,9 @@ class ErrorTest
     end
 
     def new_mission2(name:, objective:, pack:)
-            @control.new_mission(name: name, objective: objective)
-        rescue ArgumentError
-            puts 'Undefined argument in method'
+            @control.new_mision(name: name, objective: objective)
+        rescue NoMethodError
+            puts 'Undefined method'
     end
 end
 
