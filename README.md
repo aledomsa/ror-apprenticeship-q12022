@@ -1,4 +1,4 @@
-# Ruby on Rails Learning Path
+# Ruby on Rails Learning Path .
 
 ## Introduction
 
