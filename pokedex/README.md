@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ERB Database: https://dbdiagram.io/d/61ef106a7cf3fc0e7c5f5557
 
-Things you may want to cover:
+App mock ups: https://dbdiagram.io/d/61ef106a7cf3fc0e7c5f5557
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
