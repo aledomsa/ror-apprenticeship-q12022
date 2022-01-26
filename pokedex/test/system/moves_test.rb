@@ -14,7 +14,6 @@ class MovesTest < ApplicationSystemTestCase
     visit moves_url
     click_on "New Move"
 
-    fill_in "Id", with: @move.id
     fill_in "Name", with: @move.name
     fill_in "Url", with: @move.url
     click_on "Create Move"
@@ -27,7 +26,6 @@ class MovesTest < ApplicationSystemTestCase
     visit moves_url
     click_on "Edit", match: :first
 
-    fill_in "Id", with: @move.id
     fill_in "Name", with: @move.name
     fill_in "Url", with: @move.url
     click_on "Update Move"

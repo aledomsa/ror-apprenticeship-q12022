@@ -65,6 +65,6 @@ class StatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stat_params
-      params.require(:stat).permit(:id, :effort_value, :name, :stat_value, :url)
+      params.require(:stat).permit(:effort_value, :name, :stat_value, :url)
     end
 end

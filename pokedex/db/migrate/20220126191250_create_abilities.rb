@@ -1,7 +1,6 @@
 class CreateAbilities < ActiveRecord::Migration[6.1]
   def change
     create_table :abilities do |t|
-      t.integer :id
       t.integer :ability_id
       t.boolean :is_hidden
       t.string :name

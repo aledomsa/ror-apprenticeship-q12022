@@ -1,7 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
   ability_list: 
   height: 1
   image_list: 
@@ -14,7 +13,6 @@ one:
   weight: 1
 
 two:
-  id: 1
   ability_list: 
   height: 1
   image_list: 

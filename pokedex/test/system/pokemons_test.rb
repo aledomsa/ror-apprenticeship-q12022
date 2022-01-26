@@ -16,7 +16,6 @@ class PokemonsTest < ApplicationSystemTestCase
 
     fill_in "Ability list", with: @pokemon.ability_list
     fill_in "Height", with: @pokemon.height
-    fill_in "Id", with: @pokemon.id
     fill_in "Image list", with: @pokemon.image_list
     fill_in "Move list", with: @pokemon.move_list
     fill_in "Name", with: @pokemon.name
@@ -37,7 +36,6 @@ class PokemonsTest < ApplicationSystemTestCase
 
     fill_in "Ability list", with: @pokemon.ability_list
     fill_in "Height", with: @pokemon.height
-    fill_in "Id", with: @pokemon.id
     fill_in "Image list", with: @pokemon.image_list
     fill_in "Move list", with: @pokemon.move_list
     fill_in "Name", with: @pokemon.name

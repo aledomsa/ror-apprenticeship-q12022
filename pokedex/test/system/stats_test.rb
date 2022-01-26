@@ -15,7 +15,6 @@ class StatsTest < ApplicationSystemTestCase
     click_on "New Stat"
 
     fill_in "Effort value", with: @stat.effort_value
-    fill_in "Id", with: @stat.id
     fill_in "Name", with: @stat.name
     fill_in "Stat value", with: @stat.stat_value
     fill_in "Url", with: @stat.url
@@ -30,7 +29,6 @@ class StatsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Effort value", with: @stat.effort_value
-    fill_in "Id", with: @stat.id
     fill_in "Name", with: @stat.name
     fill_in "Stat value", with: @stat.stat_value
     fill_in "Url", with: @stat.url

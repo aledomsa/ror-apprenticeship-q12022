@@ -17,7 +17,7 @@ class MovesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create move" do
     assert_difference('Move.count') do
-      post moves_url, params: { move: { id: @move.id, name: @move.name, url: @move.url } }
+      post moves_url, params: { move: { name: @move.name, url: @move.url } }
     end
 
     assert_redirected_to move_url(Move.last)
@@ -34,7 +34,7 @@ class MovesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update move" do
-    patch move_url(@move), params: { move: { id: @move.id, name: @move.name, url: @move.url } }
+    patch move_url(@move), params: { move: { name: @move.name, url: @move.url } }
     assert_redirected_to move_url(@move)
   end
 

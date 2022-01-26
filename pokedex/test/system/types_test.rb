@@ -14,7 +14,6 @@ class TypesTest < ApplicationSystemTestCase
     visit types_url
     click_on "New Type"
 
-    fill_in "Id", with: @type.id
     fill_in "Name", with: @type.name
     fill_in "Type", with: @type.type_id
     fill_in "Url", with: @type.url
@@ -28,7 +27,6 @@ class TypesTest < ApplicationSystemTestCase
     visit types_url
     click_on "Edit", match: :first
 
-    fill_in "Id", with: @type.id
     fill_in "Name", with: @type.name
     fill_in "Type", with: @type.type_id
     fill_in "Url", with: @type.url

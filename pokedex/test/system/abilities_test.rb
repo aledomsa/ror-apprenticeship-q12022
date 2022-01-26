@@ -15,7 +15,6 @@ class AbilitiesTest < ApplicationSystemTestCase
     click_on "New Ability"
 
     fill_in "Ability", with: @ability.ability_id
-    fill_in "Id", with: @ability.id
     check "Is hidden" if @ability.is_hidden
     fill_in "Name", with: @ability.name
     fill_in "Url", with: @ability.url
@@ -30,7 +29,6 @@ class AbilitiesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Ability", with: @ability.ability_id
-    fill_in "Id", with: @ability.id
     check "Is hidden" if @ability.is_hidden
     fill_in "Name", with: @ability.name
     fill_in "Url", with: @ability.url

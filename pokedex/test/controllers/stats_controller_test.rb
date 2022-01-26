@@ -17,7 +17,7 @@ class StatsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create stat" do
     assert_difference('Stat.count') do
-      post stats_url, params: { stat: { effort_value: @stat.effort_value, id: @stat.id, name: @stat.name, stat_value: @stat.stat_value, url: @stat.url } }
+      post stats_url, params: { stat: { effort_value: @stat.effort_value, name: @stat.name, stat_value: @stat.stat_value, url: @stat.url } }
     end
 
     assert_redirected_to stat_url(Stat.last)
@@ -34,7 +34,7 @@ class StatsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update stat" do
-    patch stat_url(@stat), params: { stat: { effort_value: @stat.effort_value, id: @stat.id, name: @stat.name, stat_value: @stat.stat_value, url: @stat.url } }
+    patch stat_url(@stat), params: { stat: { effort_value: @stat.effort_value, name: @stat.name, stat_value: @stat.stat_value, url: @stat.url } }
     assert_redirected_to stat_url(@stat)
   end
 

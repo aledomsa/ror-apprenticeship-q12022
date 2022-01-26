@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Ability</th>
       <th>Is hidden</th>
       <th>Name</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @abilities.each do |ability| %>
       <tr>
-        <td><%= ability.id %></td>
         <td><%= ability.ability_id %></td>
         <td><%= ability.is_hidden %></td>
         <td><%= ability.name %></td>

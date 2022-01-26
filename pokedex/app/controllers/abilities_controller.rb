@@ -65,6 +65,6 @@ class AbilitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ability_params
-      params.require(:ability).permit(:id, :ability_id, :is_hidden, :name, :url)
+      params.require(:ability).permit(:ability_id, :is_hidden, :name, :url)
     end
 end

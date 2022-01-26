@@ -17,7 +17,7 @@ class AbilitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ability" do
     assert_difference('Ability.count') do
-      post abilities_url, params: { ability: { ability_id: @ability.ability_id, id: @ability.id, is_hidden: @ability.is_hidden, name: @ability.name, url: @ability.url } }
+      post abilities_url, params: { ability: { ability_id: @ability.ability_id, is_hidden: @ability.is_hidden, name: @ability.name, url: @ability.url } }
     end
 
     assert_redirected_to ability_url(Ability.last)
@@ -34,7 +34,7 @@ class AbilitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ability" do
-    patch ability_url(@ability), params: { ability: { ability_id: @ability.ability_id, id: @ability.id, is_hidden: @ability.is_hidden, name: @ability.name, url: @ability.url } }
+    patch ability_url(@ability), params: { ability: { ability_id: @ability.ability_id, is_hidden: @ability.is_hidden, name: @ability.name, url: @ability.url } }
     assert_redirected_to ability_url(@ability)
   end
 
