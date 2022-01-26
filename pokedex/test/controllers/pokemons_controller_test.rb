@@ -17,7 +17,7 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create pokemon" do
     assert_difference('Pokemon.count') do
-      post pokemons_url, params: { pokemon: { abilities: @pokemon.abilities, height: @pokemon.height, id: @pokemon.id, images: @pokemon.images, moves: @pokemon.moves, name: @pokemon.name, pokemon_id: @pokemon.pokemon_id, stats: @pokemon.stats, types: @pokemon.types, url: @pokemon.url, weight: @pokemon.weight } }
+      post pokemons_url, params: { pokemon: { ability_list: @pokemon.ability_list, height: @pokemon.height, id: @pokemon.id, image_list: @pokemon.image_list, move_list: @pokemon.move_list, name: @pokemon.name, pokemon_id: @pokemon.pokemon_id, stat_list: @pokemon.stat_list, type_list: @pokemon.type_list, url: @pokemon.url, weight: @pokemon.weight } }
     end
 
     assert_redirected_to pokemon_url(Pokemon.last)
@@ -34,7 +34,7 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pokemon" do
-    patch pokemon_url(@pokemon), params: { pokemon: { abilities: @pokemon.abilities, height: @pokemon.height, id: @pokemon.id, images: @pokemon.images, moves: @pokemon.moves, name: @pokemon.name, pokemon_id: @pokemon.pokemon_id, stats: @pokemon.stats, types: @pokemon.types, url: @pokemon.url, weight: @pokemon.weight } }
+    patch pokemon_url(@pokemon), params: { pokemon: { ability_list: @pokemon.ability_list, height: @pokemon.height, id: @pokemon.id, image_list: @pokemon.image_list, move_list: @pokemon.move_list, name: @pokemon.name, pokemon_id: @pokemon.pokemon_id, stat_list: @pokemon.stat_list, type_list: @pokemon.type_list, url: @pokemon.url, weight: @pokemon.weight } }
     assert_redirected_to pokemon_url(@pokemon)
   end
 

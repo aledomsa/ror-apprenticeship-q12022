@@ -14,15 +14,15 @@ class PokemonsTest < ApplicationSystemTestCase
     visit pokemons_url
     click_on "New Pokemon"
 
-    fill_in "Abilities", with: @pokemon.abilities
+    fill_in "Ability list", with: @pokemon.ability_list
     fill_in "Height", with: @pokemon.height
     fill_in "Id", with: @pokemon.id
-    fill_in "Images", with: @pokemon.images
-    fill_in "Moves", with: @pokemon.moves
+    fill_in "Image list", with: @pokemon.image_list
+    fill_in "Move list", with: @pokemon.move_list
     fill_in "Name", with: @pokemon.name
     fill_in "Pokemon", with: @pokemon.pokemon_id
-    fill_in "Stats", with: @pokemon.stats
-    fill_in "Types", with: @pokemon.types
+    fill_in "Stat list", with: @pokemon.stat_list
+    fill_in "Type list", with: @pokemon.type_list
     fill_in "Url", with: @pokemon.url
     fill_in "Weight", with: @pokemon.weight
     click_on "Create Pokemon"
@@ -35,15 +35,15 @@ class PokemonsTest < ApplicationSystemTestCase
     visit pokemons_url
     click_on "Edit", match: :first
 
-    fill_in "Abilities", with: @pokemon.abilities
+    fill_in "Ability list", with: @pokemon.ability_list
     fill_in "Height", with: @pokemon.height
     fill_in "Id", with: @pokemon.id
-    fill_in "Images", with: @pokemon.images
-    fill_in "Moves", with: @pokemon.moves
+    fill_in "Image list", with: @pokemon.image_list
+    fill_in "Move list", with: @pokemon.move_list
     fill_in "Name", with: @pokemon.name
     fill_in "Pokemon", with: @pokemon.pokemon_id
-    fill_in "Stats", with: @pokemon.stats
-    fill_in "Types", with: @pokemon.types
+    fill_in "Stat list", with: @pokemon.stat_list
+    fill_in "Type list", with: @pokemon.type_list
     fill_in "Url", with: @pokemon.url
     fill_in "Weight", with: @pokemon.weight
     click_on "Update Pokemon"
