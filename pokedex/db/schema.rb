@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_204910) do
+ActiveRecord::Schema.define(version: 2022_02_02_221817) do
 
   create_table "abilities", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "ability_id"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(version: 2022_02_02_204910) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "moves_pokemons", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "move_id", null: false
+    t.bigint "pokemon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["move_id"], name: "index_moves_pokemons_on_move_id"
+    t.index ["pokemon_id"], name: "index_moves_pokemons_on_pokemon_id"
+  end
+
   create_table "pokemons", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "ability_list"
     t.integer "height"
@@ -61,6 +70,15 @@ ActiveRecord::Schema.define(version: 2022_02_02_204910) do
     t.index ["stat_id"], name: "index_pokemons_stats_on_stat_id"
   end
 
+  create_table "pokemons_types", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "type_id", null: false
+    t.bigint "pokemon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pokemon_id"], name: "index_pokemons_types_on_pokemon_id"
+    t.index ["type_id"], name: "index_pokemons_types_on_type_id"
+  end
+
   create_table "stats", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "effort_value"
     t.string "name"
@@ -80,6 +98,10 @@ ActiveRecord::Schema.define(version: 2022_02_02_204910) do
 
   add_foreign_key "abilities_pokemons", "abilities"
   add_foreign_key "abilities_pokemons", "pokemons"
+  add_foreign_key "moves_pokemons", "moves"
+  add_foreign_key "moves_pokemons", "pokemons"
   add_foreign_key "pokemons_stats", "pokemons"
   add_foreign_key "pokemons_stats", "stats"
+  add_foreign_key "pokemons_types", "pokemons"
+  add_foreign_key "pokemons_types", "types"
 end
