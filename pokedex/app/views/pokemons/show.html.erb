@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ability list:</strong>
+  <%= @pokemon.ability_list %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @pokemon.height %>
+</p>
+
+<p>
+  <strong>Image list:</strong>
+  <%= @pokemon.image_list %>
+</p>
+
+<p>
+  <strong>Move list:</strong>
+  <%= @pokemon.move_list %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pokemon.name %>
+</p>
+
+<p>
+  <strong>Pokemon:</strong>
+  <%= @pokemon.pokemon_id %>
+</p>
+
+<p>
+  <strong>Stat list:</strong>
+  <%= @pokemon.stat_list %>
+</p>
+
+<p>
+  <strong>Type list:</strong>
+  <%= @pokemon.type_list %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @pokemon.url %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @pokemon.weight %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  effort_value: 1
+  name: MyString
+  stat_value: 1
+  url: MyString
+
+two:
+  effort_value: 1
+  name: MyString
+  stat_value: 1
+  url: MyString
